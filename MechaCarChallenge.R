@@ -1,10 +1,4 @@
 # Challenge 15. R+Statistics
-#> D1:identify which variables in the dataset predict the mpg prototypes
-#> D2: collect summary statistics on the PSI of the suspension coils
-#> D3: determine if the lots are statistically different from the mean population
-#> D4: design a statistical study to compare MechaCar vehicle performance against vehicles from other manufacturers.
-#> D4: for each statistical analysis, summarize findings
-
 
 # D1: Linear Regression to Predict MPG
 library(dplyr)
@@ -31,4 +25,11 @@ total_summary
 lot_summary <- suspension_coil %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI), Median=median(PSI),Variance=var(PSI), SD=sd(PSI), .groups = 'keep')
 lot_summary
 
-# D3 : 
+# D3 : t-test on suspension coils
+# PSI of all lots vs population mean
+t.test(suspension_coil$PSI, mu=1500)
+# PSI per lot vs population mean
+t.test(subset(suspension_coil,Manufacturing_Lot=="Lot1")$PSI,mu=1500)
+t.test(subset(suspension_coil,Manufacturing_Lot=="Lot2")$PSI,mu=1500)
+t.test(subset(suspension_coil,Manufacturing_Lot=="Lot3")$PSI,mu=1500)
+
