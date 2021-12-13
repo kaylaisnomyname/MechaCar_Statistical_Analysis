@@ -24,3 +24,8 @@ T test on PSI across all manufacturing lots vs population mean of 1500 has a p-v
 As shown in screenshot above, the p-values are 1, 0.6072, and 0.04168 for manufacturing lot1, lot2 and lot3, respectively: all are higher than the significant level of 0.05 and therefore, the mean PSI for each lot vs mean for population are statistically similar. This conclusion is confirmed by the results, where mean PSI for Lot1 is 1500, equal to population mean;  mean PSI for Lot2 is 1500.2, only 0.2 pounds difference than population mean; and lastly mean PSI for Lot3 is 1496.14, very closed to the population mean as well.  
 
 ## Study Design: MechaCar vs Competition  
+1. To compare vehicle price per mpg group between MechaCar vs a manufacturer named A-Car.  
+2. Null hypothesis: There is no statistical difference between mean price of MechaCar than that from A-Car per mpg group.   
+  Alternate hypothesis: There is significant difference in mean prices between MechaCar and A-Car per mpg group.  
+3. First group mpg data by serveral groups, such as group A for mpg greater than 70, group B for mpg between 60 to 70, etc. We can apply two sample T test on the vehicle price per mpg group, since two-sample t test compares two independent sample sets.  
+4. Needed data: price data for MechaCar and mgp-price data for A-Car. 
